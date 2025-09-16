@@ -8,7 +8,11 @@ funtion mostrapalvrachave(){
 
     const camporesdultado = document.querySelector("#resultado-de-palavrachave");
 
-    const palavra = texto.split(" ");
+    const palavrasChave = processaTexto(texto);
 
     camporesdultado.textContent = palavras;
+}
+function processaTexto(texto) {
+    let palavras = texto.split(/\P{L}+/u);
+    return palavras;
 }
