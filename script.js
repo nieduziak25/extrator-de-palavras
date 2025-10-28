@@ -27,7 +27,6 @@ let palavras = texto.split(/\P{L}+/u);
         return frequencias[p2] - frequencias[p1];
     }
 
-    console.log(ordenadas);
     return ordenadas.slice(0,10);
 }
 
